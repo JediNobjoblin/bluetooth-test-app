@@ -37,13 +37,13 @@ network:
 
 # Alerts and notifications
 alerts:
-  enable_email_notifications: true
+  enable_email_notifications: false
   email_recipients:
-    - "torslan@protonmail.com"
+    - "example@email.com"
   smtp_server: "smtp.protonmail.ch"
   smtp_port: 587
-  smtp_username: "torslan@protonmail.com"
-  smtp_password: "D0ntdr0pthes0ap!"
+  smtp_username: "example@email.com"
+  smtp_password: "enterpassword here"
 
 # Security settings
 security:
