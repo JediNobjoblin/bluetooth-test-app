@@ -1,0 +1,11 @@
+bluepy
+pybluez
+pyyaml
+# Uncomment the next line if you're working with Bluetooth Low Energy (BLE) devices
+# bluepy
+# Uncomment the next line if you application is a web service
+# Flash
+# Uncomment the next line if you need to make HTTP requests
+# requests
+# Uncomment the next line if you want to include testing tools
+# pytest

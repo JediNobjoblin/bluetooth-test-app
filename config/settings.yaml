@@ -1,0 +1,72 @@
+# General application settings
+application:
+  name: "BluetoothTestApp"
+  version: "1.0.0"
+  environment: "development"  # Could be "production", "staging", "development"
+
+# Bluetooth device settings
+bluetooth:
+  device_name: "MyBluetoothDevice"
+  device_address: "00:1A:7D:DA:71:13"
+  connection_timeout: 10  # Timeout in seconds
+  scan_timeout: 5          # Time to scan for devices in seconds
+  auto_reconnect: true      # Automatically reconnect on disconnection
+  max_reconnect_attempts: 3 # Maximum reconnection attempts
+
+# Logging settings
+logging:
+  level: "INFO"              # Logging levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_to_file: true          # Enable or disable logging to a file
+  log_file_path: "/app/logs/bluetooth_test.log"
+  log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s" # Log format
+  log_max_size: 10MB         # Maximum log file size before rotating
+  log_backup_count: 5        # Number of backup files to keep
+
+# Retry settings
+retry:
+  max_attempts: 5            # Maximum number of retry attempts
+  delay_between_attempts: 2  # Delay between retry attempts in seconds
+  exponential_backoff: true  # Use exponential backoff strategy
+
+# Network settings (if your application communicates over a network)
+network:
+  server_ip: "192.168.1.100"
+  server_port: 8080
+  timeout: 15  # Network timeout in seconds
+  use_tls: true  # Enable TLS for secure communication
+
+# Alerts and notifications
+alerts:
+  enable_email_notifications: true
+  email_recipients:
+    - "torslan@protonmail.com"
+  smtp_server: "smtp.protonmail.ch"
+  smtp_port: 587
+  smtp_username: "torslan@protonmail.com"
+  smtp_password: "D0ntdr0pthes0ap!"
+
+# Security settings
+security:
+  require_encryption: true  # Enforce encryption for Bluetooth communication
+  allowed_devices:          # List of allowed device MAC addresses
+    - "00:1A:7D:DA:71:13"
+    - "00:1B:7D:DA:71:14"
+    - "28:2D:7F:E3:0E:E7"
+  max_failed_attempts: 3    # Lockout after a number of failed connection attempts
+
+# Future expansion - API integration (commented out for now)
+# api:
+#   base_url: "https://api.example.com"
+#   api_key: "your_api_key"
+#   timeout: 10  # API request timeout in seconds
+
+# Future expansion - Database settings (commented out for now)
+# database:
+#   type: "sqlite"  # Could be "mysql", "postgresql", etc.
+#   host: "localhost"
+#   port: 3306
+#   username: "user"
+#   password: "password"
+#   dbname: "bluetooth_test_app"
+#   connection_pool_size: 10  # Number of connections in the pool
+
